@@ -5,7 +5,8 @@
       "name": "Vincent William",
       "email": "vincentw@smamarsudirinibekasi.sch.id",
       "password_hash": "e547bd13228250dfb4c7df1d1ebb78cfd9f2ada56ebb0c425d35829dd3ac4ae8",
-      "role": "buyer"
+      "role": "buyer",
+      "wishlist": []
     },
     {
       "user_id": "B002",
@@ -13,23 +14,23 @@
       "email": "bryantt@smamarsudirinibekasi.sch.id",
       "password_hash": "e547bd13228250dfb4c7df1d1ebb78cfd9f2ada56ebb0c425d35829dd3ac4ae8",
       "role": "buyer",
-      "wishlist": [
-        "P002"
-      ]
+      "wishlist": []
     },
     {
       "user_id": "B003",
       "name": "Hernawan Charis",
       "email": "nawancharis@smamarsudirinibekasi.sch.id",
       "password_hash": "e547bd13228250dfb4c7df1d1ebb78cfd9f2ada56ebb0c425d35829dd3ac4ae8",
-      "role": "buyer"
+      "role": "buyer",
+      "wishlist": []
     },
     {
       "user_id": "B004",
       "name": "Ecclesia Miracle",
       "email": "emiracle@smamarsudirinibekasi.sch.id",
       "password_hash": "e547bd13228250dfb4c7df1d1ebb78cfd9f2ada56ebb0c425d35829dd3ac4ae8",
-      "role": "buyer"
+      "role": "buyer",
+      "wishlist": []
     },
     {
       "user_id": "S001",
@@ -382,170 +383,8 @@
       "description": "Ayam Original tidak pedas"
     }
   ],
-  "orders": [
-    {
-      "order_id": "ORD-20260907165900-90",
-      "buyer_id": "B001",
-      "buyer_name": "Vincent William",
-      "items": [
-        {
-          "product_id": "P001",
-          "name": "Chicken Katsu Rice",
-          "tenant": "Bu Linda",
-          "quantity": 18,
-          "unit_price": 25000,
-          "king_size": true,
-          "addons": [
-            {
-              "name": "Telur",
-              "price": 3000
-            }
-          ]
-        }
-      ],
-      "total": 450000,
-      "queue_number": 1,
-      "status": "Siap Diambil",
-      "payment_status": "PAID",
-      "created_at": "07/09/2026 16:59",
-      "pickup_reminder": "Pengingat aktif — cek kembali saat pesanan sudah siap diambil."
-    },
-    {
-      "order_id": "ORD-20260907165932-39",
-      "buyer_id": "B001",
-      "buyer_name": "Vincent William",
-      "items": [
-        {
-          "product_id": "P001",
-          "name": "Chicken Katsu Rice",
-          "tenant": "Bu Linda",
-          "quantity": 18,
-          "unit_price": 18000,
-          "king_size": false,
-          "addons": []
-        }
-      ],
-      "total": 324000,
-      "queue_number": 2,
-      "status": "Siap Diambil",
-      "payment_status": "PAID",
-      "created_at": "07/09/2026 16:59",
-      "pickup_reminder": "Pengingat aktif — cek kembali saat pesanan sudah siap diambil."
-    },
-    {
-      "order_id": "ORD-20260907170214-33",
-      "buyer_id": "B002",
-      "buyer_name": "Bryan Tristan",
-      "items": [
-        {
-          "product_id": "P002",
-          "name": "Ayam Black Pepper",
-          "tenant": "Opung Tobing",
-          "quantity": 15,
-          "unit_price": 20000,
-          "king_size": false,
-          "addons": []
-        },
-        {
-          "product_id": "P002",
-          "name": "Ayam Black Pepper",
-          "tenant": "Opung Tobing",
-          "quantity": 15,
-          "unit_price": 20000,
-          "king_size": false,
-          "addons": []
-        },
-        {
-          "product_id": "P002",
-          "name": "Ayam Black Pepper",
-          "tenant": "Opung Tobing",
-          "quantity": 15,
-          "unit_price": 20000,
-          "king_size": false,
-          "addons": []
-        }
-      ],
-      "total": 900000,
-      "queue_number": 3,
-      "status": "Sedang Diproses",
-      "payment_status": "PAID",
-      "created_at": "07/09/2026 17:02",
-      "pickup_reminder": "Pengingat aktif — cek kembali saat pesanan sudah siap diambil."
-    },
-    {
-      "order_id": "ORD-20260908101846-78",
-      "buyer_id": "B001",
-      "buyer_name": "Vincent William",
-      "items": [
-        {
-          "product_id": "P003",
-          "name": "Ayam Geprek Level 5",
-          "tenant": "Pakde Geprek",
-          "quantity": 1,
-          "unit_price": 17000,
-          "king_size": false,
-          "addons": []
-        }
-      ],
-      "total": 17000,
-      "queue_number": 4,
-      "status": "Siap Diambil",
-      "payment_status": "PAID",
-      "created_at": "08/09/2026 10:18",
-      "pickup_reminder": "Belum ada pengingat"
-    },
-    {
-      "order_id": "ORD-20260908143813-91",
-      "buyer_id": "B001",
-      "buyer_name": "Vincent William",
-      "items": [
-        {
-          "product_id": "P001",
-          "name": "Chicken Katsu Rice",
-          "tenant": "Bu Linda",
-          "quantity": 2,
-          "unit_price": 22000,
-          "king_size": true,
-          "addons": []
-        }
-      ],
-      "total": 44000,
-      "queue_number": 5,
-      "status": "Siap Diambil",
-      "payment_status": "PAID",
-      "created_at": "08/09/2026 14:38",
-      "pickup_reminder": "Pengingat aktif — cek kembali saat pesanan sudah siap diambil."
-    },
-    {
-      "order_id": "ORD-20260908152406-99",
-      "buyer_id": "B001",
-      "buyer_name": "Vincent William",
-      "items": [
-        {
-          "product_id": "P008",
-          "name": "Nasi Hainan",
-          "tenant": "Bu Linda",
-          "quantity": 1,
-          "unit_price": 17000,
-          "king_size": false,
-          "addons": [
-            {
-              "name": "Saus Keju",
-              "price": 2000
-            }
-          ],
-          "notes": "Yang panas aja bu"
-        }
-      ],
-      "total": 17000,
-      "queue_number": 7,
-      "status": "Siap Diambil",
-      "payment_status": "PAID",
-      "created_at": "08/09/2026 15:24",
-      "pickup_reminder": "Pengingat aktif — cek kembali saat pesanan sudah siap diambil."
-    }
-  ],
-  "queue": 7,
+  "orders": [],
+  "queue": 0,
   "addons": [
     {
       "name": "Saus Keju",
@@ -563,5 +402,7 @@
       "name": "Extra Sambal",
       "price": 0
     }
-  ]
+  ],
+  "archived_orders": [],
+  "archived_sales": {}
 }

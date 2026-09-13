@@ -1,25 +1,80 @@
-# MARSTEEN Frontend V4
 
-Frontend prototype yang dibangun ulang dengan visual **editorial canteen / warm modern** dan tidak menggunakan gaya V3. Backend asli tidak diubah. Salinan backend asli berada di `BACKEND_UNTOUCHED/`.
+# MARSTEEN — School Food Ordering System
 
-## Yang dipertahankan dari backend
-- Buyer: Beranda, Tenant, Keranjang, Wishlist, Pesanan.
-- Product customization: Regular/King Size, add-ons/saus, jumlah, notes/catatan khusus.
-- Checkout per tenant.
-- Pembayaran per tenant dengan QR, upload bukti **PNG**, timer 15 menit, status UNPAID/PARTIAL/SUBMITTED/PAID/EXPIRED/REJECTED.
-- Order tracker dan nomor antrean.
-- Pickup reminder.
-- Seller Dashboard.
-- Seller QR upload/ganti.
-- Product management: tambah produk, update stok, hapus produk.
-- Add-ons management.
-- Seller order detail, catatan pembeli, konfirmasi/tolak pembayaran, tandai siap diambil.
-- Riwayat/archive dan laporan.
+Aplikasi simulasi pemesanan makanan sekolah berbasis Python + Tkinter dengan arsitektur OOP.
 
-## Login contoh
-Tidak ditampilkan di halaman login. Untuk pengujian, lihat akun yang tersimpan di `BACKEND_UNTOUCHED/marsteen_data.json`.
+## Jalankan
+Pastikan Python 3.10+ tersedia.
 
-Placeholder di UI: buyer `yourname@smamarsudirinibekasi.sch.id`; seller `yourname@marsteen.sch.id`.
+```bash
+python marsteen.py
+```
 
-## Catatan integrasi
-Frontend browser tidak memanggil method Tkinter secara langsung. Karena backend Python diminta tetap utuh, V4 memakai salinan dataset dan state browser (`localStorage`) sebagai adapter prototype. Backend asli tetap identik dan tidak diedit. Untuk deployment multi-user sungguhan, buat API adapter terpisah di atas backend tanpa mengubah model/OOP backend.
+Tidak membutuhkan package eksternal karena GUI memakai Tkinter dan grafik dibuat dengan Tkinter Canvas.
+
+## Akun Demo
+### Buyer
+- Email: `buyer@smamarsudirinibekasi.sch.id`
+- Password: `buyer123`
+
+### Seller
+- Email: `seller@marsteen.sch.id`
+- Password: `seller123`
+
+## Fitur
+### Entrance & Authentication
+- Pilihan role Buyer / Seller
+- Validasi domain email Buyer
+- Login Seller terverifikasi
+- Forgot Password dengan instruksi admin
+
+### Buyer
+- Dashboard
+- Search menu
+- Daftar tenant
+- Promo & rekomendasi
+- Stock validation
+- King Size
+- Add-ons / saus
+- Cart
+- Wishlist
+- Checkout
+- Simulasi QR payment
+- QR pembayaran terpisah untuk setiap tenant
+- Upload bukti pembayaran buyer per tenant dengan batas 15 menit
+- Nomor antrean
+- Order tracking
+- Reminder pengambilan
+
+### Seller
+- Dashboard statistik
+- Manajemen stok produk
+- Status Available / Habis
+- Add-ons / saus
+- Order management
+- Konfirmasi order
+- Verifikasi atau tolak bukti pembayaran
+- Upload QR pembayaran tenant dari dashboard seller
+- Pengurangan stok otomatis saat konfirmasi
+- Tandai siap diambil
+- Laporan pemasukan
+- Grafik harian / mingguan / bulanan / akumulasi
+
+## Struktur OOP
+- `User` — parent authentication model
+- `Buyer(User)` — cart, wishlist, buyer flow
+- `Seller(User)` — seller flow
+- `Product` — menu, harga, stok, add-ons, king size
+- `Order` — transaksi, status, queue, payment
+- `OrderItem` — detail item transaksi
+- `DatabaseManager` — local JSON persistence
+- `MarsteenApp` — Tkinter controller / UI
+
+## Penyimpanan
+Saat pertama kali dijalankan, aplikasi membuat:
+`marsteen_data.json`
+
+File tersebut merupakan mock/local database. Hapus file tersebut jika ingin mengembalikan data demo awal.
+
+## Catatan
+ZIP referensi yang diberikan hanya berisi folder `css/` dan `js/` tanpa file HTML/CSS/JS yang dapat dipakai sebagai sumber visual. Karena itu aplikasi dibuat sebagai implementasi Tkinter mandiri berdasarkan spesifikasi fitur yang diberikan.
